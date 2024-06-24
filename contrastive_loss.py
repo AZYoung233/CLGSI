@@ -142,7 +142,7 @@ class contrastive_loss(nn.Module):
         molecular = inter_pos_result + intra_pos_result
         denominator = inter_pos_result + intra_pos_result + inter_neg_result + intra_neg_result
 
-        # one_loss = -torch.log(torch.div(molecular, denominator).sum(1))     #按行计算每一个样本的对比损失
+        #coumpute Loss
         one_loss = -torch.log(torch.div(molecular.sum(1), denominator.sum(1)))
         return one_loss.mean()
 

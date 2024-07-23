@@ -23,7 +23,7 @@ The offical code for the paper [《CLGSI: Contrastive learning guided by sentime
 - Download dataset from https://github.com/thuiar/MMSA
 - In "config\config_regression.py" set the file path to the path where your dataset files are located.
 - python run.py
-- In order to facilitate the reproduction, we provide the trained weights file in "results\models" for reproducing the results.
+- In order to facilitate the reproduction, we provide the trained weights file in [checkpoint](https://drive.google.com/drive/folders/1BsPX39uoKy18-pZMh2m4lZpR45OJuUk5?usp=drive_link) for reproducing the results.
 
 
 

@@ -125,7 +125,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.05,
                     'post_audio_dropout': 0.05,
                     'post_video_dropout': 0.05,
-                    'skip_net_reduction': 4,
+                    'skip_net_reduction': 2,
                     'warm_up_epochs': 110,
                     'gamma': 0.24,
                     'update_epochs': 1,

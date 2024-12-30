@@ -125,6 +125,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.05,
                     'post_audio_dropout': 0.05,
                     'post_video_dropout': 0.05,
+                    'skip_net_reduction': 4,
                     'warm_up_epochs': 110,
                     'gamma': 0.24,
                     'update_epochs': 1,
@@ -162,6 +163,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.01,
                     'post_audio_dropout': 0.01,
                     'post_video_dropout': 0.01,
+                    'skip_net_reduction': 8,
                     'warm_up_epochs':120,
                     #loss weight   best：1
                     'gamma':0.33,                  #best is 46
@@ -200,6 +202,7 @@ class ConfigRegression():
                     'post_text_dropout': 0.4,
                     'post_audio_dropout': 0.4,
                     'post_video_dropout': 0.4,
+                    'skip_net_reduction': 8,
                     'warm_up_epochs': 35,
                     'update_epochs': 1,
                     'early_stop': 8,

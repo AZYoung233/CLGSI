@@ -43,7 +43,7 @@ class CLGSI(nn.Module):
 
         # the aligned layer for text
         self.post_text_dropout = nn.Dropout(p=args.post_text_dropout)
-        self.text_skip_net = unimodal_skip_net(input_channel = args.text_out, enlager=args.post_text_dim)   #跟对齐后的向量长度保持一致
+        self.text_skip_net = unimodal_skip_net(input_channel = args.text_out, enlager = args.post_text_dim, reduction = args.skip_net_reduction)   #跟对齐后的向量长度保持一致
         self.post_text_layer_1 = nn.Linear(args.text_out, args.post_text_dim)
         self.post_text_layer_2 = nn.Linear(args.post_text_dim, args.post_text_dim)
         # self.textBatchNorm = nn.BatchNorm1d(args.post_text_dim)
@@ -51,14 +51,14 @@ class CLGSI(nn.Module):
 
         # the aligned layer for audio
         self.post_audio_dropout = nn.Dropout(p=args.post_audio_dropout)
-        self.audio_skip_net = unimodal_skip_net(input_channel=args.audio_out, enlager=args.post_text_dim)  # 跟对齐后的向量长度保持一致
+        self.audio_skip_net = unimodal_skip_net(input_channel = args.audio_out, enlager = args.post_text_dim, reduction = args.skip_net_reduction)  # 跟对齐后的向量长度保持一致
         self.post_audio_layer_1 = nn.Linear(args.audio_out, args.post_audio_dim)
         self.post_audio_layer_2 = nn.Linear(args.post_audio_dim, args.post_audio_dim)
         # self.audioBatchNorm = nn.BatchNorm1d(args.post_audio_dim)
 
         # the aligned layer for video
         self.post_video_dropout = nn.Dropout(p=args.post_video_dropout)
-        self.video_skip_net = unimodal_skip_net(input_channel=args.video_out, enlager=args.post_text_dim)  # 跟对齐后的向量长度保持一致
+        self.video_skip_net = unimodal_skip_net(input_channel = args.video_out, enlager = args.post_text_dim, reduction = args.skip_net_reduction)  # 跟对齐后的向量长度保持一致
         self.post_video_layer_1 = nn.Linear(args.video_out, args.post_video_dim)
         self.post_video_layer_2 = nn.Linear(args.post_video_dim, args.post_video_dim)
         # self.vedioBatchNorm = nn.BatchNorm1d(args.post_video_dim)

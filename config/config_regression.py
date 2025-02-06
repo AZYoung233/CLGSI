@@ -126,8 +126,8 @@ class ConfigRegression():
                     'post_audio_dropout': 0.05,
                     'post_video_dropout': 0.05,
                     'skip_net_reduction': 2,
-                    'warm_up_epochs': 110,
-                    'gamma': 0.24,
+                    'warm_up_epochs': 75,
+                    'gamma': 0.95,
                     'update_epochs': 1,
                     'early_stop': 8,
                     # res
@@ -164,9 +164,9 @@ class ConfigRegression():
                     'post_audio_dropout': 0.01,
                     'post_video_dropout': 0.01,
                     'skip_net_reduction': 8,
-                    'warm_up_epochs':120,
+                    'warm_up_epochs':40,
                     #loss weight   best：1
-                    'gamma':0.33,                  #best is 46
+                    'gamma':0.48,                 
                     'update_epochs': 1,
                     'early_stop': 8,
                     # res
@@ -203,11 +203,11 @@ class ConfigRegression():
                     'post_audio_dropout': 0.4,
                     'post_video_dropout': 0.4,
                     'skip_net_reduction': 8,
-                    'warm_up_epochs': 35,
+                    'warm_up_epochs': 95,
                     'update_epochs': 1,
                     'early_stop': 8,
                     # loss weight
-                    'gamma': 1,
+                    'gamma': 0.38,
                     # res
                     'H': 1.0
                 },

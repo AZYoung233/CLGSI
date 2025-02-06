@@ -135,7 +135,8 @@ class AuVi_Encoder(nn.Module):
         '''
         super(AuVi_Encoder, self).__init__()
         self.position_embbeding = PositionalEncoding(hidden_size, 0.1,  device, max_length)
-        self.encoder_layer = nn.TransformerEncoderLayer(hidden_size, nhead)
+        # self.encoder_layer = nn.TransformerEncoderLayer(hidden_size, nhead)
+        self.encoder_layer = nn.TransformerEncoderLayer(hidden_size, nhead, batch_first = True )
         self.transformer_encoder = nn.TransformerEncoder(self.encoder_layer, num_layers)
 
 
